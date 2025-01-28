@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lokesh Portfolio </title>
-    <link rel="icon" type="image/png" href="./cv.png">
+    <title>Lokesh Portfolio</title>
+    <link rel="icon" type="image/png" href="./cv.png" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
@@ -30,7 +30,6 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #3b929a;
       }
-    
 
       @keyframes slideDown {
         0% {
@@ -81,7 +80,6 @@
           blink 0.75s step-end infinite;
       }
 
-
       .rotating-colors-bg {
         background: linear-gradient(to right, #9b4d96, #f87171, #10b981);
         background-size: 300% 300%; /* Make the gradient larger to allow rotation */
@@ -89,14 +87,17 @@
       }
       @keyframes rotate-colors {
         0% {
-          background-position: 0% 50%; 
+          background-position: 0% 50%;
         }
         100% {
           background-position: 100% 50%;
         }
       }
 
-    
+      .hyphenate {
+        word-break: break-word;
+        hyphens: auto; 
+      }
     </style>
 
     <script
@@ -115,7 +116,10 @@
       <div
         class="container mx-auto flex items-center justify-between px-3 py-3 lg:w-full lg:px-20 lg:py-4 md:px-12 md:p-4"
       >
-        <div id="name" class="text-3xl ml-2 text-nowrap font-bold  bg-gradient-to-br from-red-500 to-purple-600 text-transparent bg-clip-text   text-center">
+        <div
+          id="name"
+          class="text-3xl ml-2 text-nowrap font-bold bg-gradient-to-br from-red-500 to-purple-600 text-transparent bg-clip-text text-center"
+        >
           Lokesh Nalamasa
         </div>
 
@@ -222,7 +226,7 @@
           >
             <img
               src="./Lokesh1.jpg"
-              class="w-full h-full p-2 items-center rounded-full cursor-pointer bg-cover "
+              class="w-full h-full p-2 items-center rounded-full cursor-pointer bg-cover"
               alt=""
             />
           </div>
@@ -230,7 +234,7 @@
             <h1
               class="text-4xl px-3 lg:text-6xl md:text-5xl font-bold animate-fadeInUp"
             >
-            Hey there! I'm
+              Hey there! I'm
               <p
                 class="bg-gradient-to-br from-red-500 to-purple-600 text-transparent bg-clip-text typing my-3 text-center"
               >
@@ -238,7 +242,10 @@
               </p>
             </h1>
             <p class="text-lg md:text-xl flex flex-col mt-4 animate-fadeInUp">
-              <span class="m-4 bg-gradient-to-br from-red-500 to-purple-600 text-transparent bg-clip-text">Front-End Developer.</span>
+              <span
+                class="m-4 bg-gradient-to-br from-red-500 to-purple-600 text-transparent bg-clip-text"
+                >Front-End Developer.</span
+              >
               <span class="mx-8 md:w-full">
                 An aspiring software engineer passionate about coding and
                 technology.
@@ -364,7 +371,7 @@
                 aria-hidden="true"
               ></i>
             </h2>
-            <div class="font-semibold tracking-wide mb-6">
+            <div class="font-semibold tracking-wide mb-6 w-full break-words  hyphenate">
               <p class="my-3">
                 Hi there! I &#x27;m Lokesh Nalamasa,
                 <span class="font-bold">an aspiring software engineer</span>
@@ -374,7 +381,7 @@
                   frontend and backend development.</span
                 >
               </p>
-              <p class="my-3 inline">
+              <p class="my-3">
                 I have a solid history of developing high-quality digital
                 solutions, ranging from designing intuitive user interfaces with
                 React.js to building reliable backend systems using Node.js. My
@@ -384,7 +391,7 @@
                 >
                 that surpasses expectations.
               </p>
-              <p class="my-3">
+              <p class="my-3 inline">
                 During my career, I &#x27;ve had the privilege of working on
                 various projects, each offering distinct challenges and
                 opportunities for personal and professional growth. I excel in
@@ -526,7 +533,10 @@
                   target="_blank"
                   class="text-blue-600 hover:text-blue-800 hover:bg-gray-200 p-2 rounded-full"
                 >
-                  <i class="fab fa-github text-3xl cursor-pointer" aria-hidden="true"></i>
+                  <i
+                    class="fab fa-github text-3xl cursor-pointer"
+                    aria-hidden="true"
+                  ></i>
                 </a>
                 <a href="./projects/employee.html" class="text-nowrap">
                   view project
