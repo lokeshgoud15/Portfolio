@@ -2,7 +2,7 @@ module.exports = {
   purge: [],
   darkMode: 'class', 
   
-  content: ['./index.html'],
+  content: ['./index.html','projects/blog.html','projects/employee.html','projects/twitter.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -10,6 +10,7 @@ module.exports = {
         primary: '#1DA1F2',
         secondary: '#14171A',
       },
+
       animation: {
         fadeInUp: 'fadeInUp 1s ease-out'
       },

@@ -14,10 +14,107 @@
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #4a5568;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #00eaff;
+        border-radius: 15px;
+        border: 2px solid #2d3748;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3b929a;
+      }
+    
+
+      @keyframes slideDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-slideDown {
+        animation: slideDown 1s ease-in-out;
+      }
+      @keyframes slideLeft {
+        0% {
+          opacity: 0;
+          transform: translateX(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-slideLeft {
+        animation: slideLeft 1s ease-in-out;
+      }
+      @keyframes slideRight {
+        0% {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-slideRight {
+        animation: slideRight 1s ease-in-out;
+      }
+      @keyframes typing {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+      .typing {
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 2px white solid;
+        width: 0px;
+        animation: typing 7s steps(20) 1s infinite,
+          blink 0.75s step-end infinite;
+      }
+
+
+      .rotating-colors-bg {
+        background: linear-gradient(to right, #9b4d96, #f87171, #10b981);
+        background-size: 300% 300%; /* Make the gradient larger to allow rotation */
+        animation: rotate-colors 3s linear infinite; /* Rotate colors smoothly */
+      }
+      @keyframes rotate-colors {
+        0% {
+          background-position: 0% 50%; 
+        }
+        100% {
+          background-position: 100% 50%;
+        }
+      }
+
+    
+    </style>
   </head>
 
   <body
-    class="bg-gray-800 overflow-x-hidden text-white  relative"
+    class="bg-gray-800 overflow-x-hidden text-white bg-[url('https://img.freepik.com/free-vector/stream-binary-code-design-vector_53876-161363.jpg')] bg-cover bg-no-repeat bg-blend-color bg-opacity-100  relative"
   >
     <!-- Header Section -->
     <header
@@ -123,7 +220,7 @@
 
     <!-- projects absolute -->
     <div
-      class="fixed  bottom-0 left-0 cursor-pointer bg-cyan-800 hover:px-3 hover:py-2 rounded-r-full flex w-10 h-96 flex-col gap-1 items-center justify-center hover:w-32 overflow-hidden animate-slideLeft duration-500 ease-in-out z-50 opacity-100 md:opacity-70 hover:md:opacity-100"
+      class="fixed  bottom-0 left-0 cursor-pointer bg-cyan-800 hover:px-3 hover:py-2 rounded-r-full flex w-10 h-96 flex-col gap-1 items-center justify-center hover:w-28 overflow-hidden animate-slideRight duration-500 ease-in-out z-50 opacity-100 md:opacity-70 hover:md:opacity-100"
     >
       <a
         href="./employee.html"
