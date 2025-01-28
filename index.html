@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <style>
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #4a5568;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #00eaff;
+        border-radius: 15px;
+        border: 2px solid #2d3748;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3b929a;
+      }
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fadeInUp {
+        animation: fadeInUp 1s ease-in-out;
+      }
+
+      @keyframes slideDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-slideDown {
+        animation: slideDown 1s ease-in-out;
+      }
+      @keyframes slideLeft {
+        0% {
+          opacity: 0;
+          transform: translateX(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-slideLeft {
+        animation: slideLeft 1s ease-in-out;
+      }
+      @keyframes typing {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+      .typing {
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 2px white solid;
+        width: 0;
+        animation: typing 5s steps(20) 1s infinite,
+          blink 0.75s step-end infinite;
+      }
+
+
+      .rotating-colors-bg {
+        background: linear-gradient(to right, #9b4d96, #f87171, #10b981);
+        background-size: 300% 300%; /* Make the gradient larger to allow rotation */
+        animation: rotate-colors 3s linear infinite; /* Rotate colors smoothly */
+      }
+      @keyframes rotate-colors {
+        0% {
+          background-position: 0% 50%; 
+        }
+        100% {
+          background-position: 100% 50%;
+        }
+      }
+
+    
+    </style>
+
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-gray-800 overflow-x-hidden text-white bg-[url('https://img.freepik.com/free-vector/stream-binary-code-design-vector_53876-161363.jpg')] bg-cover bg-no-repeat bg-blend-color bg-opacity-50"
+  >
+    <!-- Header -->
+    <header
+      class="sticky animate-slideDown top-0 md:left-0 z-50 w-full mb-3 shadow-xl cursor-pointer text-white bg-gray-600 overflow-hidden"
+    >
+      <div
+        class="container mx-auto flex items-center justify-between px-3 py-3 lg:w-full lg:px-20 lg:py-4 md:px-12 md:p-4"
+      >
+        <div id="name" class="text-3xl ml-2 text-nowrap font-bold">
+          Lokesh Nalamasa
+        </div>
+
+        <nav class="nav hidden md:flex md:text-center space-x-6">
+          <a href="#home" class="hover:bg-blue-400 hover:rounded-xl p-2"
+            >Home</a
+          >
+          <a href="#about" class="hover:bg-blue-400 hover:rounded-xl p-2"
+            >About Me</a
+          >
+          <a href="#projects" class="hover:bg-blue-400 hover:rounded-xl p-2"
+            >Projects</a
+          >
+          <a href="#contact" class="hover:bg-blue-400 hover:rounded-xl p-2"
+            >Contact</a
+          >
+          <div class="">
+            <i
+              id="theme"
+              class="fas fa-moon text-2xl text-center mt-2 cursor-pointer"
+            ></i>
+          </div>
+        </nav>
+        <div
+          class="mr-10 space-y-1 md:hidden z-20 cursor-pointer"
+          id="hamburger"
+        >
+          <div class="w-6 h-0.5 bg-cyan-400 burger"></div>
+          <div class="w-3 h-0.5 bg-cyan-400 burger"></div>
+          <div class="w-6 h-0.5 bg-cyan-400 burger"></div>
+        </div>
+      </div>
+    </header>
+
+    <div
+      class="w-16 float-end fixed top-16 right-0 bg-blue-300 rounded-l-full z-50 duration-500 ease-in"
+    >
+      <nav
+        id="menu"
+        class="w-full hidden overflow-hidden flex-col h-[90%] float-right rounded-b-3xl md:hidden space-y-8 p-10 text-center"
+      >
+        <a
+          href="#home"
+          class="hover:text-blue-400 text-2xl cursor-pointer text-white"
+          ><i class="fa fa-home"></i
+        ></a>
+        <a
+          href="#about"
+          class="hover:text-blue-400 cursor-pointer text-2xl text-white"
+          ><i class="fa fa-user-circle" aria-hidden="true"></i
+        ></a>
+        <a
+          href="#projects"
+          class="hover:text-blue-400 cursor-pointer text-2xl text-white"
+          ><i class="fa fa-laptop" aria-hidden="true"></i
+        ></a>
+        <a
+          href="#contact"
+          class="hover:text-blue-400 cursor-pointer text-2xl text-white"
+          ><i class="fa fa-envelope" aria-hidden="true"></i
+        ></a>
+
+        <a
+          href="https://linkedin.com/in/lokesh-nalamasa"
+          target="_blank"
+          class="hover:text-blue-500 text-2xl text-white cursor-pointer rounded-full"
+          ><i class="fab fa-linkedin" aria-hidden="true"></i
+        ></a>
+        <a
+          href="https://github.com/lokeshgoud15"
+          target="_blank"
+          class="hover:text-gray-600 text-2xl cursor-pointer text-white rounded-full"
+          ><i class="fab fa-github-alt" aria-hidden="true"></i
+        ></a>
+        <a
+          href="https://instagram.com/lokesh_nalamasa"
+          target="_blank"
+          class="hover:text-pink-600 text-2xl cursor-pointer text-white rounded-full"
+          ><i class="fab fa-instagram" aria-hidden="true"></i
+        ></a>
+        <i id="theme2" class="fas fa-moon text-2xl cursor-pointer"></i>
+      </nav>
+    </div>
+
+    <!-- home -->
+    <section
+      id="home"
+      class="h-screen relative bg-cover bg-center mt-16 md:mt-4 hover:opacity-100"
+    >
+      <div
+        class="fixed top-[90%] z-50 sm:top-[90%] lg:top-[90%] md:top-[90%] left-8 md:left-12 hover:scale-110 delay-200 duration-300"
+      >
+        <a href="#blogs" class="cursor-pointer">
+          <i
+            class="fa fa-blog text-xl md:text-4xl border rounded-full p-3 md:p-3 cursor-pointer bg-blue-400"
+          ></i>
+        </a>
+      </div>
+
+      <div class="flex items-center justify-center h-full mt-16 md:mt-4">
+        <div class="text-center lg:flex lg:items-center gap-5">
+          <div
+            class="w-80 h-96 mx-auto shrink-0 rounded-full rotating-colors-bg animate-fadeInUp"
+          >
+            <img
+              src="./Lokesh1.jpg"
+              class="w-full h-full p-2 items-center rounded-full cursor-pointer bg-cover "
+              alt=""
+            />
+          </div>
+          <div class="">
+            <h1
+              class="text-4xl px-3 lg:text-6xl md:text-5xl font-bold animate-fadeInUp"
+            >
+            Hey there! I'm
+              <p
+                class="bg-gradient-to-br from-red-500 to-purple-600 text-transparent bg-clip-text typing my-3 text-center"
+              >
+                Lokesh Nalamasa
+              </p>
+            </h1>
+            <p class="text-lg md:text-xl flex flex-col mt-4 animate-fadeInUp">
+              <span class="m-4 bg-gradient-to-br from-red-500 to-purple-600 text-transparent bg-clip-text">Front-End Developer.</span>
+              <span class="mx-8 md:w-full">
+                An aspiring software engineer passionate about coding and
+                technology.
+              </span>
+            </p>
+
+            <a
+              href="#projects"
+              class="mt-6 inline-block p-[1.5] mr-5 h-12 w-36 bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 bg-emerald-600 hover:shadow-lg hover:shadow-purple-600/30 text-white rounded-full hover:bg-green-700 hover:scale-110 hover:text-white animate-fadeInUp"
+              ><p
+                class="flex w-full h-full font-bold items-center border justify-center rounded-full bg-cyan-700"
+              >
+                View My Work
+              </p></a
+            >
+            <a
+              href="#contact"
+              class="mt-6 inline-block p-[1.5] mr-5 h-12 w-28 bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 bg-emerald-600 hover:shadow-lg hover:shadow-purple-600/30 text-white rounded-full hover:scale-110 hover:text-white animate-fadeInUp"
+              ><p
+                class="flex w-full h-full font-bold items-center border bg-green-700 justify-center rounded-full"
+              >
+                Hire Me
+              </p></a
+            >
+            <a
+              target="_blank"
+              href="https://drive.google.com/file/d/17RSMjt0YnC1cqO88OT1Yosd5pdOjJToy/view"
+              class="mt-6 inline-block p-[1.5] mr-5 h-12 w-28 bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 bg-emerald-600 hover:shadow-lg hover:shadow-purple-600/30 text-white rounded-full hover:bg-green-700 hover:scale-110 hover:text-white animate-fadeInUp"
+              ><p
+                class="flex w-full h-full font-bold items-center border justify-center rounded-full bg-orange-700"
+              >
+                Resume
+              </p></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="hidden md:fixed md:z-50 bottom-0 right-0 cursor-pointer md:bg-blue-500 hover:md:px-3 hover:md:py-2 rounded-l-full md:flex md:w-16 md:h-72 md:flex-col gap-1 items-center justify-center md:hover:w-32 overflow-hidden animate-slideLeft duration-500 ease-in-out opacity-75 hover:opacity-100"
+      >
+        <a
+          href="https://linkedin.com/in/lokesh-nalamasa"
+          target="_blank"
+          class="text-xl text-white hover:bg-blue-600 rounded-full px-2 py-1"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a
+          href="https://github.com/lokeshgoud15"
+          target="_blank"
+          class="text-xl text-white hover:bg-gray-600 rounded-full px-2 py-1"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://instagram.com/lokesh_nalamasa"
+          target="_blank"
+          class="text-xl text-white hover:bg-pink-500 rounded-full px-2 py-1"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.hackerrank.com/profile/nlokeshgoud7"
+          class="text-lg text-white hover:bg-[#2ec866] rounded-full px-2 py-1"
+          target="_blank"
+          role="link"
+          aria-label="Hacker rank"
+        >
+          <i class="fa fa-terminal"></i>
+        </a>
+        <a
+          href="https://leetcode.com/u/LOKESHNALAMASA/"
+          class="text-xl text-white hover:bg-gray-200 rounded-full px-2 py-2"
+          target="_blank"
+          role="link"
+          aria-label="leetcode"
+        >
+          <img
+            class="w-5 h-5 bg-cover"
+            src="https://cdn.iconscout.com/icon/free/png-512/free-leetcode-3521542-2944960.png?f=avif&w=256"
+            alt=""
+          />
+        </a>
+      </div>
+    </section>
+
+    <!-- about -->
+
+    <section
+      id="about"
+      class="max-w-screen my-20 mx-auto hover:animate-fadeInUp lg:max-w-full px-6 sm:px-12 sm:py-12 md:px-16 md:py-5 lg:px-16 lg:py-5 opacity-75 focus:opacity-100 hover:opacity-100 hover:-translate-y-20 duration-500 ease-linear"
+    >
+      <div class="lg:px-10 px-4">
+        <div
+          class="flex flex-col items-center justify-center h-full w-full mb-3 animate-fadeInUp"
+        >
+          <h2
+            class="text-4xl font-bold tracking-widest uppercase animate-fadeInUp"
+          >
+            About Me
+          </h2>
+          <div class="w-12 h-[5px] my-4 rounded-full bg-blue-600"></div>
+          <span
+            class="w-11/12 font-medium text-center text-sm lg:text-lg tracking-wide"
+          >
+            Here you will find more information about me, what I do, and my
+            current skills mostly in terms of programming and technology
+          </span>
+        </div>
+        <div
+          class="flex items-start lg:flex-row flex-col justify-start gap-10 w-full mt-4"
+        >
+          <div
+            class="lg:w-1/2 my-16 lg:my-0 lg:p-3 font-sans font-medium animate-fadeInUp"
+          >
+            <h2
+              class="font-bold tracking-wide text-center md:inline-block text-2xl mb-3 md:bg-green-500 rounded-full py-2 px-4"
+            >
+              Know About me!
+              <i
+                class="fa fa-arrow-down md:text-white text-blue-500"
+                aria-hidden="true"
+              ></i>
+            </h2>
+            <div class="font-semibold tracking-wide mb-6">
+              <p class="my-3">
+                Hi there! I &#x27;m Lokesh Nalamasa,
+                <span class="font-bold">an aspiring software engineer</span>
+                located in India. My expertise spans
+                <span class=""
+                  >JavaScript, React.js, and Node.js, with experience in both
+                  frontend and backend development.</span
+                >
+              </p>
+              <p class="my-3 inline">
+                I have a solid history of developing high-quality digital
+                solutions, ranging from designing intuitive user interfaces with
+                React.js to building reliable backend systems using Node.js. My
+                primary goal is always to produce
+                <span class="font-bold"
+                  >clean, efficient, and scalable code</span
+                >
+                that surpasses expectations.
+              </p>
+              <p class="my-3">
+                During my career, I &#x27;ve had the privilege of working on
+                various projects, each offering distinct challenges and
+                opportunities for personal and professional growth. I excel in
+                the ongoing learning and problem-solving that characterizes the
+                technology sector.
+              </p>
+              <p class="my-3">
+                Outside of programming, I like to keep up with the newest
+                developments in technology and work with others who share my
+                passion. If you're interested in exploring ways we can partner
+                on your upcoming project, don’t hesitate to reach out. Let
+                &#x27;s turn ideas into reality and create a significant impact
+                together
+              </p>
+            </div>
+          </div>
+          <div class="lg:w-1/2 lg:px-5 md:py-3 animate-fadeInUp">
+            <h2
+              class="text-2xl font-bold mb-6 md:bg-purple-500 px-5 py-2 md:rounded-full text-center md:inline-block"
+            >
+              My Skills <i class="fas fa-cogs"></i>
+            </h2>
+            <div class="flex flex-wrap gap-4 my-3 text-xs lg:text-lg">
+              <span
+                class="px-5 py-3 text-base bg-gray-700 text-gray-300 cursor-pointer font-medium rounded-lg hover:scale-105"
+              >
+                C <i class="devicon-c-plain colored"></i
+              ></span>
+              <span
+                class="px-5 py-3 text-base bg-gray-700 text-gray-300 cursor-pointer font-medium rounded-lg hover:scale-105"
+                >Python<i class="devicon-python-plain colored"></i
+              ></span>
+              <span
+                class="px-5 py-3 text-base bg-gray-700 text-gray-300 cursor-pointer font-medium rounded-lg hover:scale-105"
+                >HTML <i class="devicon-html5-plain colored"></i
+              ></span>
+              <span
+                class="px-5 py-3 text-base bg-gray-700 text-gray-300 cursor-pointer font-medium rounded-lg hover:scale-105"
+                >CSS <i class="devicon-css3-plain colored"></i
+              ></span>
+              <span
+                class="px-5 py-3 text-base bg-gray-700 text-gray-300 cursor-pointer font-medium rounded-lg hover:scale-105"
+                >Bootstrap <i class="devicon-bootstrap-plain colored"></i>
+              </span>
+              <span
+                class="px-5 py-3 text-base bg-gray-700 text-gray-300 cursor-pointer font-medium rounded-lg hover:scale-105"
+                >TailwindCSS <i class="devicon-tailwindcss-plain colored"></i>
+              </span>
+              <span
+                class="px-5 py-3 text-base bg-gray-700 text-gray-300 cursor-pointer font-medium rounded-lg hover:scale-105"
+                >JavaScript <i class="devicon-javascript-plain colored"></i>
+              </span>
+              <span
+                class="px-5 py-3 text-base bg-gray-700 text-gray-300 cursor-pointer font-medium rounded-lg hover:scale-105"
+                >React.js <i class="devicon-react-plain colored"></i
+              ></span>
+              <span
+                class="px-5 py-3 text-base bg-gray-700 text-gray-300 cursor-pointer font-medium rounded-lg hover:scale-105"
+                >Node.js <i class="devicon-nodejs-plain colored"></i
+              ></span>
+              <span
+                class="px-5 py-3 text-base bg-gray-700 text-gray-300 cursor-pointer font-medium rounded-lg hover:scale-105"
+                >Express.js
+                <i
+                  class="devicon-express-original"
+                  style="font-size: 18px; color: #4caf50"
+                ></i
+              ></span>
+              <span
+                class="px-5 py-3 text-base bg-gray-700 text-gray-300 cursor-pointer font-medium rounded-lg hover:scale-105"
+                >MongoDB <i class="devicon-mongodb-plain colored"></i
+              ></span>
+              <span
+                class="px-5 py-3 text-base bg-gray-700 text-gray-300 cursor-pointer font-medium rounded-lg hover:scale-105"
+                >MySQL <i class="devicon-mysql-original colored"></i
+              ></span>
+              <span
+                class="px-5 py-3 text-base bg-gray-700 text-gray-300 cursor-pointer font-medium rounded-lg hover:scale-105"
+                >AWS
+                <i
+                  class="fab fa-aws"
+                  style="font-size: 18px; color: #ff9900"
+                ></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- projects -->
+
+    <section
+      id="projects"
+      class="animate-fadeInUp focus:opacity-100 opacity-75 hover:opacity-100 hover:-translate-y-20 duration-500 ease-linear"
+    >
+      <div class="px-8 lg:px-20">
+        <div
+          class="flex flex-col items-center justify-baseline h-full w-full mb-3"
+        >
+          <h2 class="text-4xl font-bold tracking-widest uppercase">Projects</h2>
+          <div class="w-12 h-[5px] my-4 rounded-full bg-blue-600"></div>
+
+          <div
+            class="grid grid-cols-1 w-[screen] md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10 mt-2"
+          >
+            <!-- 1st project -->
+            <div
+              class="max-w-96 md:max-w-96 border rounded-xl p-2 cursor-pointer divide-blue-100 shadow-2xl hover:scale-110 ease-linear delay-200 duration-300"
+            >
+              <img
+                class="w-full h-80 p-2 rounded-2xl"
+                src="https://img.freepik.com/free-vector/hand-drawn-business-partners-communication_52683-76700.jpg?t=st=1737872154~exp=1737875754~hmac=cf0f1854c2207de664c6a925b9c1c1a4c8a613f29f2f528b14190a803c3f60af&w=740"
+              />
+              <h1 class="font-bold text-2xl text-center mb-2">
+                Employee management system
+              </h1>
+              <p class="min-h-36">
+                Employee management system is a web application that allows
+                users to manage employee data, including employee information,
+                job roles, and performance reviews. It provides a comprehensive
+                solution for HR management, enabling efficient tracking and
+                updating of employee records.
+              </p>
+              <div class="mt-2">
+                <p class="text-xl">Tools:</p>
+              </div>
+              <ul class="flex items-center gap-1 flex-wrap mt-1">
+                <li class="py-2 px-3 bg-gray-500 rounded-full">Node.js</li>
+                <li class="py-2 px-3 bg-gray-500 rounded-full">Express.js</li>
+                <li class="py-2 px-3 bg-gray-500 rounded-full">MongoDB</li>
+                <li class="py-2 px-3 bg-gray-500 rounded-full">React.js</li>
+              </ul>
+              <div
+                class="w-full flex items-center justify-center p-2 gap-4 mt-2"
+              >
+                <a
+                  href="https://github.com/lokeshgoud15/Employee-Management-System"
+                  target="_blank"
+                  class="text-blue-600 hover:text-blue-800 hover:bg-gray-200 p-2 rounded-full"
+                >
+                  <i class="fab fa-github text-3xl cursor-pointer" aria-hidden="true"></i>
+                </a>
+                <a href="" class="text-nowrap">
+                  view project
+                  <i class="fa fa-external-link" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- 2nd project -->
+            <div
+              class="md:max-w-96 max-w-96 border rounded-xl p-2 cursor-pointer divide-blue-100 shadow-2xl hover:scale-110 ease-linear delay-200 duration-300"
+            >
+              <img
+                class="w-full h-80 p-2 rounded-2xl"
+                src="https://plus.unsplash.com/premium_photo-1720744786849-a7412d24ffbf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxvZ3xlbnwwfHwwfHx8MA%3D%3D"
+              />
+              <h1 class="font-bold text-2xl text-center mb-2">MERN Blog App</h1>
+              <p class="min-h-36">
+                The MERN Blog App is a web application that allows users to
+                create, read, update, and delete blog posts. It is built using
+                MongoDB, Express, React, and Node.js, providing a full-stack
+                solution for managing blog content. Users can register, log in,
+                and interact with the blog posts through a user-friendly
+                interface.
+              </p>
+              <div class="mt-2">
+                <p class="text-xl">Tools:</p>
+              </div>
+              <ul class="flex items-center flex-wrap gap-1 mt-1">
+                <li class="py-2 px-3 bg-gray-500 rounded-full">Node.js</li>
+                <li class="py-2 px-3 bg-gray-500 rounded-full">Express.js</li>
+                <li class="py-2 px-3 bg-gray-500 rounded-full">MongoDB</li>
+                <li class="py-2 px-3 bg-gray-500 rounded-full">React.js</li>
+              </ul>
+              <div
+                class="w-full flex items-center justify-center p-2 gap-4 mt-2"
+              >
+                <a
+                  href="https://github.com/lokeshgoud15/Mern-Blog-App"
+                  target="_blank"
+                  class="text-blue-600 hover:text-blue-800 hover:bg-gray-200 p-2 rounded-full"
+                >
+                  <i class="fab fa-github text-3xl" aria-hidden="true"></i>
+                </a>
+                <a href="" class="text-nowrap">
+                  view project
+                  <i class="fa fa-external-link" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- 3rd project -->
+            <div
+              class="md:max-w-96 max-w-96 border rounded-xl p-2 cursor-pointer divide-blue-100 shadow-2xl hover:scale-110 ease-linear delay-200 duration-300"
+            >
+              <img
+                class="w-full h-80 p-2 rounded-2xl"
+                src="https://store-images.s-microsoft.com/image/apps.45406.9007199266244427.4d45042b-d7a5-4a83-be66-97779553b24d.2a88a418-b96d-44a6-ad4f-5e0ee6289b2c"
+              />
+              <h1 class="font-bold text-2xl mb-2 text-center">Twitter Clone</h1>
+              <p class="min-h-36">
+                The Twitter Clone is a web application that allows users to post
+                tweets, follow other users, and interact with tweets through
+                likes and comments. It is built using modern web technologies to
+                provide a seamless and interactive user experience.
+              </p>
+              <div class="mt-2">
+                <p class="text-xl">Tools:</p>
+              </div>
+              <ul class="flex items-center gap-1 flex-wrap mt-1">
+                <li class="py-2 px-3 bg-gray-500 rounded-full">Node.js</li>
+                <li class="py-2 px-3 bg-gray-500 rounded-full">Express.js</li>
+                <li class="py-2 px-3 bg-gray-500 rounded-full">MongoDB</li>
+                <li class="py-2 px-3 bg-gray-500 rounded-full">React.js</li>
+              </ul>
+              <div
+                class="w-full flex items-center justify-center p-2 gap-4 mt-2"
+              >
+                <a
+                  href="https://github.com/lokeshgoud15/Twitter-c"
+                  target="_blank"
+                  class="text-blue-600 hover:text-blue-800 hover:bg-gray-200 p-2 rounded-full"
+                >
+                  <i class="fab fa-github text-3xl" aria-hidden="true"></i>
+                </a>
+                <a href="" class="text-nowrap">
+                  view project
+                  <i class="fa fa-external-link" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+
+    <section
+      id="contact"
+      class="mx-8 md:max-w-full py-20 md:py-28 overflow-hidden animate-fadeInUp opacity-75 focus:opacity-100 hover:opacity-100 hover:-translate-y-20 duration-500 ease-linear"
+    >
+      <div class="md:mx-8 lg:px-20 px-4">
+        <div
+          class="flex flex-col items-center justify-center h-full w-full mb-3"
+        >
+          <h2 class="text-4xl font-bold tracking-widest uppercase">CONTACT</h2>
+          <div class="w-12 h-[5px] my-4 rounded-full bg-blue-600"></div>
+          <span
+            class="w-11/12 font-medium text-center text-sm lg:text-lg tracking-wide"
+          >
+            Please don&#x27;t hesitate to reach out by filling out the form
+            below. I&#x27;ll respond to your message promptly.
+          </span>
+        </div>
+        <div class="w-full flex justify-center items-center mt-10">
+          <form
+            class="w-full lg:w-3/5 bg-gray-800 px-6 lg:px-10 py-10 rounded-md shadow-lg"
+            action=""
+          >
+            <div class="w-full flex flex-col my-4">
+              <label for="name" class="text-gray-300 font-semibold">Name</label>
+              <input
+                type="text"
+                id="name"
+                class="px-5 py-4 outline-none bg-gray-600 rounded-md my-2 text-base placeholder:font-semibold border focus:border-green-600"
+                placeholder="Enter Your Name"
+                name="name"
+                value=""
+              />
+            </div>
+            <div class="w-full flex flex-col my-4">
+              <label for="email" class="text-gray-300 font-semibold"
+                >Email</label
+              >
+              <input
+                type="text"
+                id="email"
+                class="px-5 py-4 outline-none bg-gray-600 rounded-md my-2 text-base placeholder:font-semibold border focus:border-green-600"
+                placeholder="Enter Your Email"
+                name="email"
+                value=""
+              />
+            </div>
+            <div class="w-full flex flex-col my-4">
+              <label for="message" class="text-gray-300 font-semibold"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                rows="8"
+                name="message"
+                class="px-5 py-4 outline-none bg-gray-600 rounded-md my-2 text-base resize-none placeholder:font-semibold border focus:border-green-600"
+                placeholder="Enter Your Message"
+              ></textarea>
+            </div>
+            <div class="w-full flex flex-row-reverse mt-4">
+              <input
+                type="submit"
+                class="w-full lg:w-1/4 tracking-wider bg-blue-600 hover:bg-blue-800 cursor-pointer text-white py-3 rounded-md font-semibold uppercase text-base font-sans ease-linear duration-200 hover:-translate-y-1 shadow-lg disabled:to-blue-400"
+                value="Submit"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- foooter -->
+
+    <footer
+      class="px-8 md:w-full lg:px-32 pt-10 lg:pt-24 flex flex-col bg-black text-white"
+    >
+      <div
+        class="flex flex-col-reverse lg:flex-row gap-8 justify-between items-start"
+      >
+        <div class="w-full lg:w-2/4">
+          <h3
+            class="text-lg lg:text-xl font-bold uppercase font-sans tracking-wider select-none"
+          >
+            Lokesh Nalamasa
+          </h3>
+          <p class="mt-3 lg:mt-6 text-sm">
+            As a frontend-oriented web developer, I specialize in crafting the
+            user-facing aspects of websites and web applications, contributing
+            to the overall success of the product.
+          </p>
+        </div>
+        <div class="w-full lg:w-1/4">
+          <h3
+            class="text-lg lg:text-xl font-bold uppercase font-sans tracking-wider select-none"
+          >
+            Social
+          </h3>
+          <div class="flex items-center gap-3 lg:gap-6 mt-3 lg:mt-6">
+            <a
+              href="https://linkedin.com/in/lokesh-nalamasa"
+              class="text-lg lg:text-2xl rounded-full p-3 py-2 hover:bg-blue-500"
+              target="_blank"
+              role="link"
+              aria-label="Follow me on LinkedIn"
+              ><i class="fab fa-linkedin" aria-hidden="true"></i
+            ></a>
+            <a
+              href="https://github.com/lokeshgoud15"
+              class="text-lg lg:text-2xl hover:bg-gray-300 hover:text-black rounded-full p-3 py-2"
+              target="_blank"
+              role="link"
+              aria-label="Follow me on Github"
+              ><i class="fab fa-github" aria-hidden="true"></i
+            ></a>
+            <a
+              href=""
+              class="text-lg lg:text-2xl hover:bg-blue-400 rounded-full p-3 py-2"
+              target="_blank"
+              role="link"
+              aria-label="Follow me on Twitter"
+            >
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://instagram.com/lokesh_nalamasa"
+              class="text-lg lg:text-2xl hover:bg-pink-500 rounded-full p-3 py-2"
+              target="_blank"
+              role="link"
+              aria-label="Follow me on Twitter"
+            >
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://www.hackerrank.com/profile/nlokeshgoud7"
+              class="text-lg lg:text-2xl hover:bg-[#2ec866] rounded-full p-3 py-2"
+              target="_blank"
+              role="link"
+              aria-label="Hacker rank"
+            >
+              <i class="fa fa-terminal"></i>
+            </a>
+            <a
+              href="https://leetcode.com/u/LOKESHNALAMASA/"
+              class="text-lg lg:text-2xl bg-gray-700 hover:bg-white rounded-full p-3 py-2"
+              target="_blank"
+              role="link"
+              aria-label="leetcode"
+            >
+              <img
+                class="w-5 h-5 bg-cover"
+                src="https://cdn.iconscout.com/icon/free/png-512/free-leetcode-3521542-2944960.png?f=avif&w=256"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray-700 h-[0.5px] w-full mt-14"></div>
+      <div class="my-6 lg:my-10 text-center font-normal text-xs tracking-wider">
+        ©Copyright
+        <!-- -->
+        2025
+        <!-- -->
+        . Made by
+        <!-- -->
+        <a
+          href="https://linkedin.com/in/lokesh-nalamasa"
+          class="underline font-bold tracking-widest"
+          target="_blank"
+          >Lokesh Nalamasa</a
+        >
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
